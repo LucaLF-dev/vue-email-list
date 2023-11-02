@@ -9,7 +9,10 @@
 </head>
 <body>
     <div id="app">
-       {{email}}
+       <ul>
+        <li v-for="(email, i) in emailsList" :key="i" :log="console.log(emailsList)" >{{email}}</li>
+        
+       </ul>
     </div>
     <script src="./js/app.js"></script>
 </body>
