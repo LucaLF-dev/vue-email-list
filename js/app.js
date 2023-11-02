@@ -6,13 +6,14 @@ createApp({
 	data() {
 		return {
 			emailsList: [],
+            emailsNumber: 10,
             
 		
 		}
 	},
 	methods: {	
 		fetchEmail() {
-            for (let i = 1; i <= 10; i++) {
+            for (let i = 1; i <= this.emailsNumber; i++) {
 			   axios
 				.get('https://flynn.boolean.careers/exercises/api/random/mail')
 				.then((risp) => {
@@ -25,6 +26,7 @@ createApp({
 		},
 	},
     created() {
+
 		this.fetchEmail()
 	},
 	
