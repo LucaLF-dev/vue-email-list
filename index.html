@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue Email List</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vue Email List</title>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
-<body>
-    <div id="app">
-       <ul>
-        <li v-for="(email, i) in emailsList" :key="i" :log="console.log(emailsList)" >{{email}}</li>
-        
-       </ul>
-    </div>
-    <script src="./js/app.js"></script>
-</body>
+	</head>
+	<style>
+		.list__emails {
+			width: 600px;
+			margin: 0 auto;
+            text-align: center;
+		}
+
+        .list__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            list-style: none;
+
+        }
+
+        .list__item {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid grey;
+        }
+	</style>
+	<body>
+		<div id="app">
+			<div class="list__emails">
+				<h1>LISTA EMAILS</h1>
+				<ul class="list__wrapper">
+					<li class="list__item"
+						v-for="(email, i) in emailsList"
+						:key="i"
+						:log="console.log(emailsList)"
+					>
+						{{email}}
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="./js/app.js"></script>
+	</body>
 </html>
