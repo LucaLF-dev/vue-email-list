@@ -23,10 +23,9 @@
         }
 
         .list__item {
-            margin-top: 10px;
-            margin-bottom: 10px;
+            text-align: justify;
             padding: 10px;
-            border: 1px solid grey;
+            border-bottom: 2px solid grey;
         }
 	</style>
 	<body>
@@ -40,7 +39,7 @@
 						:key="i"
 						:log="console.log(emailsList)"
 					>
-						{{email}}
+						{{i+1}} : {{email}}
 					</li>
 				</ul>
             
